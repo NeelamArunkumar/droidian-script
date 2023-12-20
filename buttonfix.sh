@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Task 1: Clone the repository
-git clone https://github.com/NeelamArunkumar/brightness-helper.git -b /home/droidian/brightness-helper
+git clone https://github.com/NeelamArunkumar/brightness-helper.git -b main /home/droidian/brightness-helper
 
 # Task 2: Change to the brightness-helper directory
 cd /home/droidian/brightness-helper
