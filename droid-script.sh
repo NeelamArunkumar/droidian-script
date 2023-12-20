@@ -62,4 +62,36 @@ echo "WantedBy=multi-user.target" | sudo tee -a /usr/lib/systemd/system/device-h
 # Task 10: Enable device-hacks.service
 sudo systemctl enable /usr/lib/systemd/system/device-hacks.service
 
+# Task 11: Create phosh directory
+mkdir -p /etc/phosh
+
+# Task 12: Create phoc.ini file
+touch /etc/phosh/phoc.ini
+
+# Task 13: Add lines to phoc.ini
+echo "#[core]" | sudo tee /etc/phosh/phoc.ini
+echo "#xwayland=false" | sudo tee -a /etc/phosh/phoc.ini
+echo "" | sudo tee -a /etc/phosh/phoc.ini
+echo "[output:DSI-1]" | sudo tee -a /etc/phosh/phoc.ini
+echo "scale = 2" | sudo tee -a /etc/phosh/phoc.ini
+echo "" | sudo tee -a /etc/phosh/phoc.ini
+echo "[output:Virtual-1]" | sudo tee -a /etc/phosh/phoc.ini
+echo "# For the x86 VM using QXL to get a phone like geometry" | sudo tee -a /etc/phosh/phoc.ini
+echo "modeline = 87.25  720 776 848 976  1440 1443 1453 1493 -hsync +vsync" | sudo tee -a /etc/phosh/phoc.ini
+echo "mode = 720x1440" | sudo tee -a /etc/phosh/phoc.ini
+echo "scale = 2" | sudo tee -a /etc/phosh/phoc.ini
+echo "" | sudo tee -a /etc/phosh/phoc.ini
+echo "[output:X11-1]" | sudo tee -a /etc/phosh/phoc.ini
+echo "mode = 360x720" | sudo tee -a /etc/phosh/phoc.ini
+echo "#rotate = 90" | sudo tee -a /etc/phosh/phoc.ini
+echo "scale = 1" | sudo tee -a /etc/phosh/phoc.ini
+echo "" | sudo tee -a /etc/phosh/phoc.ini
+echo "[output:WL-1]" | sudo tee -a /etc/phosh/phoc.ini
+echo "mode = 360x720" | sudo tee -a /etc/phosh/phoc.ini
+echo "#rotate = 90" | sudo tee -a /etc/phosh/phoc.ini
+echo "scale = 1" | sudo tee -a /etc/phosh/phoc.ini
+echo "" | sudo tee -a /etc/phosh/phoc.ini
+echo "[output:HWCOMPOSER-1]" | sudo tee -a /etc/phosh/phoc.ini
+echo "scale = 2.0" | sudo tee -a /etc/phosh/phoc.ini
+
 echo "Tasks completed successfully!"
