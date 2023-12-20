@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Task 1: Clone the repository
-git clone https://github.com/NeelamArunkumar/brightness-helper.git
+git clone https://github.com/NeelamArunkumar/brightness-helper.git -b /home/droidian/brightness-helper
 
 # Task 2: Change to the brightness-helper directory
-cd brightness-helper
+cd /home/droidian/brightness-helper
 
 # Task 3: Install gcc
 sudo apt install gcc
